@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Zoo - Profile</title>
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=7">
+    <script src="js/theme.js?v=6"></script>
+    <script defer src="vendor/jquery.min.js"></script>
+    <script defer src="js/jquery-assignment.js"></script>
+</head>
+<body>
+    <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
+
+    <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-zoo shadow" aria-label="Main navigation" aria-keyshortcuts="ArrowLeft ArrowRight">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">🦁 City Zoo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto gap-lg-1 py-2 py-lg-0">
+                    <li class="nav-item"><a class="nav-link fw-semibold rounded-pill px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold rounded-pill px-3" href="animals.html">Animals</a></li>
+                    <li class="nav-item dropdown">
+                        <button type="button" class="nav-link dropdown-toggle fw-semibold rounded-pill px-3" data-bs-toggle="dropdown" aria-expanded="false">Visit</button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="tickets.html">Tickets</a></li>
+                            <li><a class="dropdown-item" href="schedule.html">Schedule</a></li>
+                            <li><a class="dropdown-item" href="map.html">Map</a></li>
+                            <li><a class="dropdown-item" href="rules.html">Rules</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-semibold rounded-pill px-3" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold rounded-pill px-3" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold rounded-pill px-3" href="register.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold rounded-pill px-3" href="login.html" data-account-link>Log In</a></li>
+                    <li class="nav-item ms-lg-2"><button type="button" class="btn btn-warning btn-sm rounded-pill px-3 fw-semibold" data-popup-open="subscribePopup" data-sound="pop">Subscribe</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <section class="zoo-toolbar" aria-label="Zoo hours and display settings">
+        <div class="container zoo-toolbar-layout">
+            <div class="zoo-visit-clock">
+                <div class="zoo-hours">
+                    <a class="zoo-hours-link" href="schedule.html" aria-label="View the zoo schedule">
+                        <span class="zoo-hours-badge" id="zoo-open-status">Daily hours</span><span aria-hidden="true">↗</span>
+                    </a>
+                    <span class="zoo-hours-detail" id="zoo-hours-detail">09:00–18:00 · last entry 17:00</span>
+                </div>
+                <div class="zoo-clock"><span>Astana time</span> <time id="current-datetime">—</time></div>
+            </div>
+            <div class="zoo-toolbar-actions" role="group" aria-label="Display and sound settings">
+                <button type="button" class="bar-btn" id="themeToggle" role="switch" aria-checked="false" aria-label="Dark mode">🌙 Night mode</button>
+                <button type="button" class="bar-btn" id="bgColorBtn" data-sound="click" aria-label="Change page background colour">🎨 <span class="bg-color-name">Zoo Mist</span></button>
+                <button type="button" class="bar-btn" id="soundToggle" aria-pressed="false">🔇 Sound off</button>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" data-account-page class="container page-card my-4 mt-lg-5 px-3 px-sm-4 py-4 py-lg-5">
+        <div class="row g-4 align-items-start">
+            <div class="col-12 col-md-7 col-lg-6">
+                <h1 class="pb-2 mb-2">Your Zoo Club Profile</h1>
+                <section id="profile-details" class="d-none" aria-label="Account details">
+                    <p class="lead mb-4">Welcome, <span id="profile-greeting"></span>!</p>
+                    <dl class="bg-light rounded-4 p-3 profile-info">
+                        <dt>Full Name</dt>
+                        <dd id="profile-name"></dd>
+                        <dt>Email Address</dt>
+                        <dd id="profile-email"></dd>
+                        <dt>Phone Number</dt>
+                        <dd id="profile-phone" class="mb-0"></dd>
+                    </dl>
+                    <div class="profile-preferences mb-4">
+                        <label for="profile-theme" class="form-label fw-semibold">Preferred appearance</label>
+                        <select class="form-select" id="profile-theme">
+                            <option value="day">Light mode</option>
+                            <option value="night">Dark mode</option>
+                        </select>
+                        <p class="form-text mb-0">Your preference is saved for this profile in this browser.</p>
+                        <p class="small mb-0 mt-1" id="profile-theme-status" role="status"></p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="tickets.html" class="btn btn-success">Plan a Visit</a>
+                        <button type="button" class="btn btn-outline-secondary" id="logout-button">Log Out</button>
+                    </div>
+                </section>
+                <div id="profile-guest">
+                    <p class="text-body-secondary mt-2">Log in to view your account details.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-success" href="login.html">Log In</a>
+                        <a class="btn btn-outline-success" href="register.html">Sign Up</a>
+                    </div>
+                </div>
+                <p class="alert alert-danger d-none mt-3" data-account-error role="alert" tabindex="-1"></p>
+            </div>
+            <div class="col-12 col-md-5 col-lg-6">
+                <img loading="lazy" decoding="async" src="images/lion.jpg" class="img-fluid rounded-4 w-100 side-img" alt="African lion at rest">
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center mt-5 py-4 px-3">
+        <p class="mb-0">Developers: Jumabay Saule, Ramazan Mukhan, Nurdaulet Rashken, Saidazimov Mukhammajan | Group SE-2501</p>
+    </footer>
+
+
+    <!-- Task 3: subscription popup (hidden by default, opened by js/popup.js) -->
+    <div class="popup-overlay" id="subscribePopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-hidden="true">
+        <div class="popup-box p-4 p-sm-5">
+            <button type="button" class="popup-close" data-popup-close data-sound="click" aria-label="Close subscription form">&times;</button>
+            <h2 id="popupTitle" class="h3 mb-2">Subscribe to City Zoo News</h2>
+            <p class="text-body-secondary mb-4">Save your newsletter signup in this browser.</p>
+            <form id="subscribe-form" action="#" method="post" novalidate data-validate-form>
+                <div class="mb-3">
+                    <label for="sub-name" class="form-label fw-semibold">Your Name</label>
+                    <input type="text" class="form-control" id="sub-name" name="name" placeholder="Enter your name" data-validate="name" autocomplete="name">
+                    <div class="invalid-feedback" role="alert"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="sub-email" class="form-label fw-semibold">Email Address</label>
+                    <input type="text" inputmode="email" class="form-control" id="sub-email" name="email" placeholder="example@mail.com" data-validate="email" autocomplete="email">
+                    <div class="invalid-feedback" role="alert"></div>
+                </div>
+                <div class="alert alert-success form-success d-none" role="status" tabindex="-1">Your newsletter signup was saved in this browser.</div>
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="submit" class="btn btn-success btn-lg">Subscribe</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg" data-popup-close>Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Task 4: background colour button -->
+
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/sounds.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/datetime.js?v=6"></script>
+    <script src="js/keyboard.js"></script>
+</body>
+</html>
