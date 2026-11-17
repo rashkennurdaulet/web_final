@@ -44,7 +44,7 @@ The clock uses Astana time (Asia/Almaty) and the schedule shown on the site: dai
 ## Publish and submit
 
 - Team repository: [rashkennurdaulet/web_final](https://github.com/rashkennurdaulet/web_final.git)
-- Existing GitHub Pages URL: [City Zoo](https://muchanroma2501.github.io/webasik6/)
+- Existing GitHub Pages URL: [City Zoo](https://rashkennurdaulet.github.io/web_final/)
 - The ZIP contains the updated version. The existing public site still serves the earlier version.
 
 To publish the final version, copy the contents of the `CityZoo` folder into the root of the team repository so that `index.html` is at the root. Commit and push using an account with write access. Confirm the Pages source in **Settings → Pages** and wait for the deployment to finish. Open the live site and test `login.html`, `profile.html`, and the weather panel before submitting both links.
