@@ -43,7 +43,7 @@ The clock uses Astana time (Asia/Almaty) and the schedule shown on the site: dai
 
 ## Publish and submit
 
-- Team repository: [muchanroma2501/webasik6](https://github.com/muchanroma2501/webasik6)
+- Team repository: [rashkennurdaulet/web_final](https://github.com/rashkennurdaulet/web_final.git)
 - Existing GitHub Pages URL: [City Zoo](https://muchanroma2501.github.io/webasik6/)
 - The ZIP contains the updated version. The existing public site still serves the earlier version.
 
