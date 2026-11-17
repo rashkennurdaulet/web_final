@@ -4,18 +4,6 @@ Jumabay Saule, Ramazan Mukhan, Nurdaulet Rashken, Saidazimov Mukhammajan · SE-2
 
 City Zoo is a responsive website for families and groups planning a visit. Visitors can explore the animals, check the map and schedule, estimate ticket costs, and create a Zoo Club demo account.
 
-## Run locally
-
-Extract the archive, open a terminal in the `CityZoo` folder, and run:
-
-```sh
-python3 -m http.server 8000 --bind 127.0.0.1
-```
-
-Open [localhost:8000](http://127.0.0.1:8000/) in your browser. On Windows, use `py -m http.server 8000 --bind 127.0.0.1` if `python3` is unavailable. Keep the terminal open while using the site.
-
-The site includes Bootstrap, jQuery, images and sounds. The weather and Wildlife Field Notes panels use an internet connection for live data. Field Notes can show a saved fact if the live request fails. Use a sample password for the account demo. Account details and a salted password verifier are stored in this browser's localStorage. The contact form and newsletter also save locally. The ticket wizard produces a demo booking reference.
-
 ## What to demonstrate
 
 | Requirement | Where to demonstrate |
